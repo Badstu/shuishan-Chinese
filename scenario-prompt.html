@@ -5,28 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>输入学习场景 - 水杉中文</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f2f5;
-        }
-        .iphone-16-pro-frame {
-            width: 430px;
-            height: 932px;
-            border: 1px solid #d1d5db;
-            border-radius: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-            position: relative;
-            background-color: #f7fafc;
-        }
-        .main-content {
-            height: 100%;
-        }
         .header-bg {
             background: linear-gradient(to bottom, #fff7ed, #f7fafc);
         }
@@ -45,7 +25,7 @@
         <div class="main-content flex flex-col">
             <!-- Header -->
             <header class="header-bg p-6 flex items-center space-x-4">
-                <a href="home.html" class="text-gray-600">
+                <a href="javascript:history.back()" class="text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </a>
                 <div>
@@ -80,9 +60,6 @@
             <!-- Pagoda Decoration -->
             <svg class="pagoda-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#000" d="M432 416h-48V208c0-26.5-21.5-48-48-48h-16v-80c0-26.5-21.5-48-48-48H240c-26.5 0-48 21.5-48 48v80h-16c-26.5 0-48 21.5-48 48v208H80c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM256 64h128v48H256V64zm-96 96h16v32c0 8.8 7.2 16 16 16h160c8.8 0 16-7.2 16-16v-32h16c8.8 0 16 7.2 16 16v208h-48v-96c0-8.8-7.2-16-16-16H192c-8.8 0-16 7.2-16 16v96h-48V176c0-8.8 7.2-16 16-16z"/></svg>
         </div>
-        
-        <!-- Bottom navigation would be here, but this is a sub-page of "Learn", so we omit it for a cleaner flow -->
-
     </div>
 </body>
 </html>

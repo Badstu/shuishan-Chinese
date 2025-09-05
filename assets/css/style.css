@@ -1,0 +1,43 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.iphone-16-pro-frame {
+    width: 400px;
+    height: 800px;
+    border: 1px solid #d1d5db;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    background-color: #f7fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    /* For pages without a bottom nav bar */
+    height: 100%;
+}
+
+.main-content-with-nav {
+    /* Full height minus nav bar (h-20 = 5rem = 80px) */
+    height: calc(800px - 80px);
+    overflow-y: auto;
+}
+
+
+/* Custom scrollbar for aesthetics */
+.main-content::-webkit-scrollbar,
+.main-content-with-nav::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
