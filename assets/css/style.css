@@ -10,7 +10,7 @@ body {
 
 .iphone-16-pro-frame {
     width: 400px;
-    height: 800px;
+    height: 750px;
     border: 1px solid #d1d5db;
     border-radius: 40px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -30,7 +30,7 @@ body {
 
 .main-content-with-nav {
     /* Full height minus nav bar (h-20 = 5rem = 80px) */
-    height: calc(800px - 80px);
+    height: calc(750px - 80px);
     overflow-y: auto;
 }
 
