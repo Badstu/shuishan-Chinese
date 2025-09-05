@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册 - 水杉中文</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .iphone-16-pro-frame {
+            width: 430px;
+            height: 932px;
+            border: 1px solid #d1d5db;
+            border-radius: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            background-color: #f0fdf4; /* Very light green */
+        }
+        .background-pattern {
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23a7f3d0' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .panda-logo-small svg {
+            width: 80px;
+            height: 80px;
+        }
+        /* Mountain SVG background */
+        .mountain-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 0;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="iphone-16-pro-frame background-pattern">
+        <!-- Background mountain decoration -->
+        <svg class="mountain-bg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#a7f3d0" fill-opacity="0.5" d="M0,224L48,208C96,192,192,160,288,165.3C384,171,480,213,576,240C672,267,768,277,864,256C960,235,1056,181,1152,154.7C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <svg class="mountain-bg" style="opacity: 0.3; bottom: -20px" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+             <path fill="#6ee7b7" fill-opacity="0.6" d="M0,256L60,229.3C120,203,240,149,360,149.3C480,149,600,203,720,229.3C840,256,960,256,1080,234.7C1200,213,1320,171,1380,149.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+
+        <div class="h-full flex flex-col items-center justify-between p-6 relative z-10">
+            <!-- Language Selector -->
+            <div class="w-full text-right">
+                <button class="text-gray-600 font-semibold">EN ▼</button>
+            </div>
+
+            <div class="w-full max-w-sm flex flex-col items-center flex-grow justify-center">
+                <!-- Logo -->
+                <div class="panda-logo-small mb-2">
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M724 234.9c-7.2-53.9-35.1-100.3-76.8-135C603.2 62.1 556 42.7 502.2 42.7c-53.9 0-101.1 19.4-143.2 57.2-41.7 34.7-69.6 81.1-76.8 135-1.2 8.5-2.1 17.1-2.7 25.8v9.1c0 23.3 3.3 46.2 9.8 68.2l12.3 42.2c12.9 44.2 34.1 84.6 62.8 119.9-46.7 15.6-89.9 41.6-128.4 76.8-40.4 36.9-74 81.6-99.2 132.2-25.1 50.4-41.5 106.3-48.4 166.3-1 8.9-1.8 17.9-2.3 26.9a449.6 449.6 0 0 0 448.4 449.6c247.6 0 449.6-202 449.6-449.6a449.6 449.6 0 0 0-2.3-26.9c-6.9-60-23.3-115.9-48.4-166.3-25.2-50.6-58.8-95.3-99.2-132.2-38.5-35.2-81.7-61.2-128.4-76.8 28.7-35.3 49.9-75.7 62.8-119.9l12.3-42.2c6.5-22 9.8-44.9 9.8-68.2v-9.1c-.6-8.7-1.5-17.3-2.7-25.8zM245.8 765.2c6-55.3 20.3-107.4 42-154.5 22.8-49.2 52.8-92.4 88.8-128.3 34.1-34.1 74.8-59.3 119.7-74.5 5.2-1.7 10.5-3.3 15.9-4.8v.1c25.4 68.8 69.1 127.2 127.1 169.8 55.4 40.7 122.3 62.4 191.8 62.4 8.8 0 17.5-.3 26.2-.9-6.3 58.7-22 113.4-46.1 162.2-25.4 51.5-59.5 96.6-100.8 133.5s-90 65.1-143.6 82.2a382.7 382.7 0 0 1-164.8 2.3c-53.9-13.2-103.2-37.4-145.4-71.1-42.3-33.7-76.6-76.4-101.6-126.1-23.8-47.5-38.4-99.2-44.2-154.1z m491.1-159.3c-62.1 0-121.5-19-172.9-53.8-55-37.4-96.1-91.5-119-155.1h-.1c-6.3 1.8-12.5 3.7-18.6 5.7-47.3 16.2-90.1 42.4-125.8 78.2-37.8 37.8-68.8 82.9-90.9 133.2-20.9 47.4-34.4 99.4-39.9 154.5-5.1 49.1.6 98.8 16.4 146.1 27.5 81.3 84.3 147 160.2 186.9 76 40 166.4 51.8 251.3 32.5 84.8-19.3 159.2-66.9 211.9-135.5 52.6-68.6 81.1-154.6 81.1-244.7 0-6.2-.2-12.5-.5-18.7-30.9-.2-62.1-.8-93.2-1.9zM388.9 506.2c-40.1 0-72.7-32.5-72.7-72.7s32.5-72.7 72.7-72.7 72.7 32.5 72.7 72.7-32.6 72.7-72.7 72.7zm246.3 0c-40.1 0-72.7-32.5-72.7-72.7s32.5-72.7 72.7-72.7 72.7 32.5 72.7 72.7-32.6 72.7-72.7 72.7z"/></svg>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-800 tracking-wider">水杉中文</h1>
+                
+                <!-- Login Form -->
+                <div class="w-full mt-10">
+                    <input class="w-full px-4 py-3 bg-white bg-opacity-80 border-b-2 border-gray-300 focus:border-green-500 focus:outline-none transition" type="text" placeholder="Phone number/Email">
+                    <input class="w-full px-4 py-3 mt-4 bg-white bg-opacity-80 border-b-2 border-gray-300 focus:border-green-500 focus:outline-none transition" type="password" placeholder="Password">
+                </div>
+
+                <!-- Login Button -->
+                <a href="home.html" class="w-full bg-green-500 text-white text-center font-bold py-3 rounded-full mt-8 hover:bg-green-600 transition shadow-lg shadow-green-500/30">
+                    LOGIN
+                </a>
+
+                <a href="#" class="text-green-600 mt-4 text-sm font-semibold">Verification code login</a>
+            </div>
+
+            <!-- Bottom Links -->
+            <div class="flex space-x-4 text-gray-600 pb-4">
+                <a href="#" class="font-semibold">Register</a>
+                <span>|</span>
+                <a href="home.html" class="font-semibold">Guest mode</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

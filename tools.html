@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具 - 水杉中文</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .iphone-16-pro-frame {
+            width: 430px;
+            height: 932px;
+            border: 1px solid #d1d5db;
+            border-radius: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            background-color: #f7fafc;
+        }
+        .main-content {
+            height: calc(932px - 80px); /* Full height minus nav bar */
+            overflow-y: auto;
+        }
+        .main-content::-webkit-scrollbar {
+            width: 0px;
+        }
+        .header-bg {
+            background: linear-gradient(to bottom, #dbeafe, #f7fafc);
+        }
+    </style>
+</head>
+<body>
+    <div class="iphone-16-pro-frame">
+        <div class="main-content pb-6">
+            <!-- Header -->
+            <header class="header-bg p-6">
+                <h1 class="text-3xl font-bold text-gray-800">Tool Box</h1>
+                <p class="text-gray-500 mt-1">Useful gadgets to help your learning.</p>
+            </header>
+
+            <main class="px-6 mt-6">
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Photo Translation -->
+                    <a href="#" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition aspect-square flex flex-col justify-center items-center">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold mt-3 text-gray-800">拍照翻译</h3>
+                        <p class="text-xs text-gray-500">Photo Translation</p>
+                    </a>
+
+                    <!-- AI Human Dialogue -->
+                    <a href="#" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition aspect-square flex flex-col justify-center items-center">
+                        <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center">
+                           <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h3 class="font-bold mt-3 text-gray-800">数智人对话</h3>
+                        <p class="text-xs text-gray-500">AI Dialogue</p>
+                    </a>
+
+                    <!-- Coming Soon 1 -->
+                    <div class="bg-gray-100 p-4 rounded-xl border-2 border-dashed border-gray-300 aspect-square flex flex-col justify-center items-center">
+                        <div class="bg-gray-200 w-20 h-20 rounded-full flex items-center justify-center">
+                           <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold mt-3 text-gray-500">敬请期待</h3>
+                        <p class="text-xs text-gray-400">Coming Soon</p>
+                    </div>
+
+                    <!-- Coming Soon 2 -->
+                     <div class="bg-gray-100 p-4 rounded-xl border-2 border-dashed border-gray-300 aspect-square flex flex-col justify-center items-center">
+                        <div class="bg-gray-200 w-20 h-20 rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold mt-3 text-gray-500">敬请期待</h3>
+                        <p class="text-xs text-gray-400">Coming Soon</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="absolute bottom-0 left-0 right-0 h-20 bg-white border-t border-gray-200 flex justify-around items-center rounded-b-3xl">
+            <!-- Learn -->
+            <a href="home.html" class="flex flex-col items-center text-gray-400 hover:text-green-500">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <span class="text-xs">Learn</span>
+            </a>
+            <!-- Practice -->
+            <a href="practice.html" class="flex flex-col items-center text-gray-400 hover:text-green-500">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                <span class="text-xs">Practice</span>
+            </a>
+            <!-- Tools (Active) -->
+            <a href="tools.html" class="flex flex-col items-center text-green-500">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" /></svg>
+                <span class="text-xs font-bold">Tools</span>
+            </a>
+            <!-- Me -->
+            <a href="profile.html" class="flex flex-col items-center text-gray-400 hover:text-green-500">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <span class="text-xs">Me</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

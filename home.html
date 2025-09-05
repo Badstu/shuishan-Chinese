@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习 - 水杉中文</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .iphone-16-pro-frame {
+            width: 430px;
+            height: 932px;
+            border: 1px solid #d1d5db;
+            border-radius: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            background-color: #f7fafc;
+        }
+        .main-content {
+            height: calc(932px - 80px); /* Full height minus nav bar */
+            overflow-y: auto;
+        }
+        /* Custom scrollbar for aesthetics */
+        .main-content::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        .header-bg {
+            background: linear-gradient(to bottom, #e6fffa, #f7fafc);
+            padding-bottom: 50px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            position: relative;
+        }
+        .bamboo-decoration {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 100px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="iphone-16-pro-frame">
+        <div class="main-content pb-6">
+            <!-- Header -->
+            <header class="header-bg p-6">
+                <!-- Bamboo Decoration -->
+                <svg class="bamboo-decoration" viewBox="0 0 24 24" xmlns="http://www.w.org/2000/svg"><g stroke="null"><path fill="#34d399" d="M14.5,3.375 C14.5,3.375 14.5,3.375 14.5,3.375 C14.5,3.375 14.5,3.375 14.5,3.375 C14.521,4.965 14.156,6.544 13.438,8 C12.879,9.16 12.062,10.16 11,11 C11.332,10.969 11.668,10.969 12,11 C12.941,11.832 13.621,12.832 14,14 C14.379,15.168 14.5,16.418 14.5,17.625 C14.5,18.828 14.375,19.965 14,21 L12,21 C12.375,19.965 12.5,18.828 12.5,17.625 C12.5,16.418 12.379,15.168 12,14 C11.621,12.832 10.941,11.832 10,11 C9.059,11.832 8.379,12.832 8,14 C7.621,15.168 7.5,16.418 7.5,17.625 C7.5,18.828 7.625,19.965 8,21 L6,21 C6.375,19.965 6.5,18.828 6.5,17.625 C6.5,16.418 6.379,15.168 6,14 C5.621,12.832 4.941,11.832 4,11 C4.332,10.969 4.668,10.969 5,11 C5.938,10.16 6.879,9.16 7.438,8 C6.844,6.543 6.521,4.969 6.5,3.375 C6.5,3.375 6.5,3.375 6.5,3.375 C6.5,3.375 6.5,3.375 6.5,3.375 C6.5,3.375 6.5,3.375 6.5,3.375 L8.5,3.375 C8.479,4.965 8.844,6.544 9.562,8 C10.121,9.16 10.938,10.16 12,11 C11.668,10.969 11.332,10.969 11,11 C10.062,10.16 9.121,9.16 8.562,8 C9.156,6.543 9.479,4.969 9.5,3.375 C9.5,3.375 9.5,3.375 9.5,3.375 C9.5,3.375 9.5,3.375 9.5,3.375 C9.5,3.375 9.5,3.375 9.5,3.375 L11.5,3.375 C11.479,4.965 11.844,6.544 12.562,8 C13.121,9.16 13.938,10.16 15,11 C14.668,10.969 14.332,10.969 14,11 C13.062,10.16 12.121,9.16 11.562,8 C12.156,6.543 12.479,4.969 12.5,3.375 C12.5,3.375 12.5,3.375 12.5,3.375 C12.5,3.375 12.5,3.375 12.5,3.375 C12.5,3.375 12.5,3.375 12.5,3.375 L14.5,3.375 z" stroke-width="0"/></g></svg>
+
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Hello, Alex!</h1>
+                        <p class="text-gray-500">Let's start learning.</p>
+                    </div>
+                    <img src="https://i.pravatar.cc/50?u=alex" alt="User Avatar" class="w-12 h-12 rounded-full">
+                </div>
+            </header>
+
+            <main class="px-6 -mt-12 space-y-6">
+                <!-- Learning Progress Card -->
+                <div class="bg-white p-5 rounded-2xl shadow-md flex items-center space-x-4">
+                    <div class="relative w-20 h-20">
+                        <svg class="w-full h-full" viewBox="0 0 36 36">
+                            <path class="text-gray-200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+                            <path class="text-green-500" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span class="font-bold text-xl text-green-600">75%</span>
+                            <span class="text-xs text-gray-500">HSK 2</span>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-bold text-gray-800">Daily Goal</h2>
+                        <p class="text-sm text-gray-500">You're on a 5-day streak! 🔥</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                            <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Modes -->
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-3">Learning Modes</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <!-- Topic-based Learning -->
+                        <a href="topic-based.html" class="bg-gradient-to-br from-teal-100 to-cyan-100 p-4 rounded-xl shadow-sm flex items-center space-x-4 hover:scale-105 transition-transform">
+                            <div class="bg-teal-500 p-3 rounded-lg"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></div>
+                            <div>
+                                <h3 class="font-bold text-teal-800">主题式学习</h3>
+                                <p class="text-sm text-teal-600">Topic-based Learning</p>
+                            </div>
+                        </a>
+                        <!-- Scenario-based Learning -->
+                        <a href="scenario-prompt.html" class="bg-gradient-to-br from-amber-100 to-orange-100 p-4 rounded-xl shadow-sm flex items-center space-x-4 hover:scale-105 transition-transform">
+                             <div class="bg-amber-500 p-3 rounded-lg"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg></div>
+                            <div>
+                                <h3 class="font-bold text-amber-800">场景式学习</h3>
+                                <p class="text-sm text-amber-600">Scenario-based Learning</p>
+                            </div>
+                        </a>
+                        <!-- HSK Level Learning -->
+                        <a href="hsk-based.html" class="bg-gradient-to-br from-indigo-100 to-purple-100 p-4 rounded-xl shadow-sm flex items-center space-x-4 hover:scale-105 transition-transform">
+                             <div class="bg-indigo-500 p-3 rounded-lg"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div>
+                            <div>
+                                <h3 class="font-bold text-indigo-800">HSK等级学习</h3>
+                                <p class="text-sm text-indigo-600">HSK Level Learning</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Tools -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Today's Recommendation -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-gray-700">今日推荐</h3>
+                        <p class="text-sm text-gray-500 mt-1">Daily Pick</p>
+                        <div class="mt-3 bg-green-100 text-green-700 text-center py-2 rounded-lg">
+                            <p class="font-bold">词汇：<span class="text-lg">天气</span></p>
+                        </div>
+                    </div>
+                     <!-- Mistake Notebook -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                         <h3 class="font-bold text-gray-700">错题本</h3>
+                         <p class="text-sm text-gray-500 mt-1">Mistakes</p>
+                         <div class="mt-3 bg-red-100 text-red-700 text-center py-2 rounded-lg">
+                             <p class="font-bold"><span class="text-lg">5</span> words to review</p>
+                         </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="absolute bottom-0 left-0 right-0 h-20 bg-white border-t border-gray-200 flex justify-around items-center rounded-b-3xl">
+            <!-- Learn (Active) -->
+            <a href="home.html" class="flex flex-col items-center text-green-500">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                <span class="text-xs font-bold">Learn</span>
+            </a>
+            <!-- Practice -->
+            <a href="practice.html" class="flex flex-col items-center text-gray-400 hover:text-green-500">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                <span class="text-xs">Practice</span>
+            </a>
+            <!-- Tools -->
+            <a href="tools.html" class="flex flex-col items-center text-gray-400 hover:text-green-500">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span class="text-xs">Tools</span>
+            </a>
+            <!-- Me -->
+            <a href="profile.html" class="flex flex-col items-center text-gray-400 hover:text-green-500">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <span class="text-xs">Me</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

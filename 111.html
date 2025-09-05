@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水杉中文 (Shuishan Chinese) - H5 Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A little bit of custom CSS for page transitions */
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom scrollbar for better look */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+
+    <!-- Phone Wrapper -->
+    <div class="container mx-auto max-w-sm h-screen bg-gray-50 flex flex-col font-sans">
+
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-y-auto pb-16">
+            
+            <!-- Page: Launch Screen -->
+            <div id="page-launch" class="page active p-6 flex flex-col items-center justify-center h-full bg-green-500 text-white">
+                <div class="text-center">
+                    <!-- Placeholder for a Panda/Bamboo Logo -->
+                    <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-1.096.906-2.48.4-4.056-1.192-3.684-4.634-6.424-8.534-6.424-3.899 0-7.341 2.74-8.534 6.424-.506 1.576-.245 2.96.4 4.056M12 14v4m-4-4v4m8-4v4"></path></svg>
+                    <h1 class="text-4xl font-bold">水杉中文</h1>
+                    <p class="text-lg mt-2">Shuishan Chinese</p>
+                    <p class="mt-8">Your smart path to mastering Chinese.</p>
+                </div>
+                <button data-goto="page-login" class="nav-button absolute bottom-24 bg-white text-green-500 font-bold py-3 px-12 rounded-full shadow-lg">Get Started</button>
+            </div>
+
+            <!-- Page: Login/Register -->
+            <div id="page-login" class="page p-8 flex flex-col justify-center h-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Welcome Back!</h2>
+                <p class="text-gray-500 mb-8">Login or create an account to continue.</p>
+                <div class="space-y-4">
+                    <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                    <input type="password" placeholder="Password" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                </div>
+                <button data-goto="page-home" class="nav-button w-full mt-6 bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">Login</button>
+                <button class="w-full mt-3 bg-gray-100 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-200 transition">Register</button>
+                <div class="text-center text-gray-400 my-6">or continue with</div>
+                <div class="flex justify-center space-x-4">
+                    <!-- Social Login Icons -->
+                    <button class="w-12 h-12 bg-white border rounded-full flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="w-6 h-6"></button>
+                    <button class="w-12 h-12 bg-white border rounded-full flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-6 h-6"></button>
+                </div>
+            </div>
+
+            <!-- Page: Home (Study) -->
+            <div id="page-home" class="page">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <p class="text-gray-500">Welcome back,</p>
+                            <h1 class="text-2xl font-bold text-gray-800">Alex</h1>
+                        </div>
+                        <img src="https://i.pravatar.cc/150?u=alex" class="w-12 h-12 rounded-full">
+                    </div>
+
+                    <!-- Learning Progress Card -->
+                    <div class="bg-blue-500 text-white p-5 rounded-xl shadow-lg mb-6">
+                        <p class="text-sm opacity-80">Daily Goal Progress</p>
+                        <div class="w-full bg-blue-400 rounded-full h-2.5 mt-2">
+                            <div class="bg-white h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <p class="font-bold">🔥 15 Day Streak!</p>
+                            <span class="text-sm">750 / 1000 XP</span>
+                        </div>
+                    </div>
+
+                    <!-- Learning Modes -->
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Choose Your Path</h2>
+                    <div class="space-y-4">
+                        <div data-goto="page-course" class="nav-button bg-white p-5 rounded-xl shadow-md flex items-center space-x-4 cursor-pointer hover:shadow-lg transition">
+                            <div class="bg-green-100 p-3 rounded-lg"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Thematic Learning</h3>
+                                <p class="text-sm text-gray-500">Follow structured paths based on themes.</p>
+                            </div>
+                        </div>
+                        <div data-goto="page-scenario-prompt" class="nav-button bg-white p-5 rounded-xl shadow-md flex items-center space-x-4 cursor-pointer hover:shadow-lg transition">
+                             <div class="bg-yellow-100 p-3 rounded-lg"><svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg></div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Scenario-based Learning</h3>
+                                <p class="text-sm text-gray-500">Generate lessons for real-life situations.</p>
+                            </div>
+                        </div>
+                         <div class="bg-white p-5 rounded-xl shadow-md flex items-center space-x-4 cursor-pointer hover:shadow-lg transition">
+                            <div class="bg-indigo-100 p-3 rounded-lg"><svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">HSK Level Learning</h3>
+                                <p class="text-sm text-gray-500">Prepare for HSK exams, from 1 to 6.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Access -->
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="bg-white p-4 rounded-xl shadow-md">
+                            <h4 class="font-bold">Today's Recommendation</h4>
+                            <p class="text-sm text-gray-500 mt-1">Lesson: Basic Greetings</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-md">
+                            <h4 class="font-bold">Mistake Notebook</h4>
+                            <p class="text-sm text-gray-500 mt-1">5 words to review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Scenario Prompt -->
+            <div id="page-scenario-prompt" class="page p-6">
+                <button data-goto="page-home" class="nav-button text-gray-600 mb-4">&larr; Back to Home</button>
+                <h1 class="text-2xl font-bold text-gray-800">Create Your Own Lesson</h1>
+                <p class="text-gray-500 mt-2 mb-6">Describe a real-life scenario you want to learn. We'll generate a custom lesson for you!</p>
+                <textarea class="w-full h-40 p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="e.g., 'Ordering a coffee and a croissant at a cafe in Shanghai.' or 'Asking for directions to the nearest subway station.'"></textarea>
+                <button data-goto="page-course" class="nav-button w-full mt-6 bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">Generate Lesson</button>
+            </div>
+
+            <!-- Page: Course List -->
+            <div id="page-course" class="page p-6">
+                 <button data-goto="page-home" class="nav-button text-gray-600 mb-4">&larr; Back to Home</button>
+                <!-- Main Scenario Card -->
+                <div class="bg-white p-5 rounded-xl shadow-md mb-6">
+                    <p class="text-sm text-gray-500">SCENARIO</p>
+                    <h1 class="text-xl font-bold text-gray-800">At the Restaurant (在餐厅)</h1>
+                </div>
+
+                <!-- Course Items -->
+                <div class="space-y-3">
+                    <div data-goto="page-vocab" class="nav-button bg-white p-4 rounded-xl shadow-sm flex items-center justify-between cursor-pointer">
+                        <div>
+                            <h3 class="font-bold text-gray-800">1. Ordering Food (点菜)</h3>
+                            <p class="text-sm text-gray-500">5 key phrases</p>
+                        </div>
+                        <div class="text-green-500">&rarr;</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800">2. Asking for Recommendations (问推荐)</h3>
+                            <p class="text-sm text-gray-500">4 key phrases</p>
+                        </div>
+                        <div class="text-gray-400">🔒</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800">3. Paying the Bill (买单)</h3>
+                            <p class="text-sm text-gray-500">6 key phrases</p>
+                        </div>
+                        <div class="text-gray-400">🔒</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Vocabulary List -->
+            <div id="page-vocab" class="page p-6">
+                <button data-goto="page-course" class="nav-button text-gray-600 mb-4">&larr; Back to Course</button>
+                <h1 class="text-2xl font-bold text-gray-800 mb-4">Vocabulary: Ordering Food</h1>
+                <div class="space-y-2">
+                    <!-- Vocab Item -->
+                    <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                        <div>
+                            <p class="text-lg font-semibold">菜单 <span class="text-base font-normal text-gray-500">càidān</span></p>
+                            <p class="text-gray-600">Menu</p>
+                        </div>
+                        <button class="text-gray-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                        <div>
+                            <p class="text-lg font-semibold">服务员 <span class="text-base font-normal text-gray-500">fúwùyuán</span></p>
+                            <p class="text-gray-600">Waiter / Waitress</p>
+                        </div>
+                        <button class="text-gray-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                        <div>
+                            <p class="text-lg font-semibold">点菜 <span class="text-base font-normal text-gray-500">diǎncài</span></p>
+                            <p class="text-gray-600">To order food</p>
+                        </div>
+                        <button class="text-gray-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></button>
+                    </div>
+                </div>
+                <button data-goto="page-exercise" class="nav-button w-full mt-8 bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">Start Learning (15 Exercises)</button>
+            </div>
+
+            <!-- Page: Exercise -->
+            <div id="page-exercise" class="page p-6 flex flex-col h-full">
+                <div class="flex items-center gap-4">
+                     <button data-goto="page-vocab" class="nav-button text-gray-600 text-2xl">&times;</button>
+                     <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-500 h-2.5 rounded-full" style="width: 10%"></div>
+                     </div>
+                </div>
+
+                <div class="flex-1 flex flex-col justify-center">
+                    <h2 class="text-xl text-gray-700 mb-6">Which one of these is "Menu"?</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="bg-white p-4 border-2 border-gray-200 rounded-lg text-center">
+                            <p class="text-2xl">买单</p>
+                            <p class="text-gray-500">mǎidān</p>
+                        </button>
+                         <button class="bg-white p-4 border-2 border-gray-200 rounded-lg text-center focus:border-green-500 focus:ring-2 focus:ring-green-300">
+                            <p class="text-2xl">菜单</p>
+                            <p class="text-gray-500">càidān</p>
+                        </button>
+                         <button class="bg-white p-4 border-2 border-gray-200 rounded-lg text-center">
+                            <p class="text-2xl">你好</p>
+                            <p class="text-gray-500">nǐhǎo</p>
+                        </button>
+                         <button class="bg-white p-4 border-2 border-gray-200 rounded-lg text-center">
+                            <p class="text-2xl">谢谢</p>
+                            <p class="text-gray-500">xièxiè</p>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="w-full mt-auto bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">Check</button>
+            </div>
+
+            <!-- Page: Practice -->
+            <div id="page-practice" class="page p-6">
+                <h1 class="text-2xl font-bold text-gray-800 mb-6">Practice Center</h1>
+                <h2 class="font-bold text-lg mb-3">Skill Drills</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-xl shadow-md text-center">
+                        <svg class="w-8 h-8 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <p class="mt-2 font-semibold">Listening</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md text-center">
+                        <svg class="w-8 h-8 text-blue-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                        <p class="mt-2 font-semibold">Speaking</p>
+                    </div>
+                     <div class="bg-white p-5 rounded-xl shadow-md text-center">
+                        <svg class="w-8 h-8 text-yellow-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <p class="mt-2 font-semibold">Reading</p>
+                    </div>
+                     <div class="bg-white p-5 rounded-xl shadow-md text-center">
+                        <svg class="w-8 h-8 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        <p class="mt-2 font-semibold">Writing</p>
+                    </div>
+                </div>
+
+                <h2 class="font-bold text-lg mb-3 mt-8">Test Yourself</h2>
+                <div class="bg-white p-5 rounded-xl shadow-md flex items-center space-x-4">
+                    <div class="bg-indigo-100 p-3 rounded-lg"><svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg></div>
+                    <div>
+                        <h3 class="font-bold">Comprehensive Quiz</h3>
+                        <p class="text-sm text-gray-500">Create a custom test.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Tools -->
+            <div id="page-tools" class="page p-6">
+                <h1 class="text-2xl font-bold text-gray-800 mb-6">Tools</h1>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-xl shadow-md text-center">
+                        <svg class="w-10 h-10 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <p class="mt-2 font-semibold">Photo Translate</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md text-center">
+                        <svg class="w-10 h-10 text-blue-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        <p class="mt-2 font-semibold">AI Tutor Chat</p>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-xl border-2 border-dashed text-center text-gray-400">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        <p class="mt-2 font-semibold">Coming Soon</p>
+                    </div>
+                     <div class="bg-gray-100 p-5 rounded-xl border-2 border-dashed text-center text-gray-400">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        <p class="mt-2 font-semibold">Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Profile (My) -->
+            <div id="page-profile" class="page">
+                <div class="p-6">
+                    <h1 class="text-2xl font-bold text-gray-800 mb-6">My Profile</h1>
+                    <div class="flex items-center space-x-4 bg-white p-4 rounded-xl shadow-md mb-6">
+                        <img src="https://i.pravatar.cc/150?u=alex" class="w-16 h-16 rounded-full">
+                        <div>
+                            <h2 class="text-xl font-bold">Alex Johnson</h2>
+                            <p class="text-gray-500">alex.j@email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-xl shadow-md">
+                            <p class="text-sm text-gray-500">Words Learned</p>
+                            <p class="text-2xl font-bold">350</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-md">
+                            <p class="text-sm text-gray-500">Hours Studied</p>
+                            <p class="text-2xl font-bold">42</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md">
+                        <ul class="divide-y divide-gray-200">
+                            <li class="p-4 flex justify-between items-center"><span>Account Settings</span><span class="text-gray-400">&gt;</span></li>
+                            <li class="p-4 flex justify-between items-center"><span>Notifications</span><span class="text-gray-400">&gt;</span></li>
+                            <li class="p-4 flex justify-between items-center"><span>Learning Reminders</span><span class="text-gray-400">&gt;</span></li>
+                            <li class="p-4 flex justify-between items-center"><span>Help Center</span><span class="text-gray-400">&gt;</span></li>
+                            <li class="p-4 flex justify-between items-center text-red-500"><span>Logout</span><span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <footer class="fixed bottom-0 left-0 right-0 max-w-sm mx-auto bg-white border-t border-gray-200">
+            <nav class="flex justify-around">
+                <button data-target="page-home" class="bottom-nav-item flex-1 p-3 text-center text-green-500">
+                    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <span class="text-xs">Study</span>
+                </button>
+                <button data-target="page-practice" class="bottom-nav-item flex-1 p-3 text-center text-gray-400">
+                    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    <span class="text-xs">Practice</span>
+                </button>
+                 <button data-target="page-tools" class="bottom-nav-item flex-1 p-3 text-center text-gray-400">
+                    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    <span class="text-xs">Tools</span>
+                </button>
+                <button data-target="page-profile" class="bottom-nav-item flex-1 p-3 text-center text-gray-400">
+                    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span class="text-xs">My</span>
+                </button>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pages = document.querySelectorAll('.page');
+            const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+            const navButtons = document.querySelectorAll('.nav-button');
+
+            function showPage(pageId) {
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                const newPage = document.getElementById(pageId);
+                if (newPage) {
+                    newPage.classList.add('active');
+                }
+            }
+            
+            // Initial page load, just in case
+            showPage('page-launch');
+            // Timeout to simulate loading and auto-navigate to login for demo
+            setTimeout(() => {
+                if (document.getElementById('page-launch').classList.contains('active')) {
+                    const getStartedButton = document.querySelector('#page-launch .nav-button');
+                    if(getStartedButton) {
+                        // showPage(getStartedButton.dataset.goto);
+                    }
+                }
+            }, 2500);
+
+
+            // Handle bottom navigation
+            bottomNavItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const targetId = item.dataset.target;
+                    showPage(targetId);
+
+                    // Update active state style
+                    bottomNavItems.forEach(nav => {
+                        nav.classList.remove('text-green-500');
+                        nav.classList.add('text-gray-400');
+                    });
+                    item.classList.add('text-green-500');
+                    item.classList.remove('text-gray-400');
+                });
+            });
+
+            // Handle all other navigation buttons
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.goto;
+                    if (targetId) {
+                       showPage(targetId);
+                       
+                       // Special handling to activate the correct bottom nav icon if needed
+                       const correspondingNavItem = document.querySelector(`.bottom-nav-item[data-target="${targetId}"]`);
+                       if (correspondingNavItem) {
+                           bottomNavItems.forEach(nav => {
+                               nav.classList.remove('text-green-500');
+                               nav.classList.add('text-gray-400');
+                           });
+                           correspondingNavItem.classList.add('text-green-500');
+                           correspondingNavItem.classList.remove('text-gray-400');
+                       }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
